@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" backupGlobals="true" backupStaticAttributes="false" cacheResult="false" colors="false" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" forceCoversAnnotation="false"  processIsolation="false" stopOnError="false" stopOnFailure="false" stopOnIncomplete="false" stopOnSkipped="false" stopOnRisky="false"  timeoutForSmallTests="1" timeoutForMediumTests="10" timeoutForLargeTests="60" verbose="false">
+  <coverage/>
+  <testsuites>
+    <testsuite name="Library Test Suite">
+      <directory suffix="Test.php">tests</directory>
+    </testsuite>
+  </testsuites> 
+  <php>
+    <env name="version" value="latest"/>
+    <env name="region" value="eu-west-3"/>
+    <env name="credentials_key" value="key"/>
+    <env name="credentials_secret" value="secret"/>
+    <env name="sqs_endpoint" value="http://sonergia-aws-sqs:9324"/>
+  </php>
+</phpunit>

@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+    php-fpm:
+        container_name: sonergia-aws-php
+        image: php:7-fpm
+        restart: always
+        volumes:
+            - .:/var/www/html
+
+    sonergia-aws-sqs:
+        build: ./docker/sqs
+        container_name: sonergia-aws-sqs
+        restart: always
+        ports:
+            - '9324:9324'

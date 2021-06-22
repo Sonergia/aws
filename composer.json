@@ -15,5 +15,8 @@
             "name": "Alexandre Vinogradov",
             "email": "alexandre.vinogradov@sonergia.fr"
         }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
 }
