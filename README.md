@@ -6,6 +6,10 @@ Library for making work with AWS PHP SDK easier
 
 ### Installation
 
+```
+composer require sonergia/aws
+```
+
 ### Modules:
 
 #### SQS
