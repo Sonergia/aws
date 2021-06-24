@@ -3,6 +3,7 @@
     "description": "AWS Php SDK Wrapper",
     "type": "library",
     "require": {
+        "php": ">=7.3",
         "aws/aws-sdk-php": "^3.184"
     },
     "autoload": {
