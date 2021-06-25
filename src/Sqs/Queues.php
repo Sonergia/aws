@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 namespace Sonergia\Aws\Sqs;
 
-use Aws\Sqs\SqsClient; 
+use Aws\Sqs\SqsClient;
 use Aws\Exception\AwsException;
 
 class Queues
@@ -30,7 +30,6 @@ class Queues
             ));
 
             return new Queue($this->client, $result->get(Params::QUEUE_URL));
-
         } catch (AwsException $e) {
             throw new AwsSqsException("Create SQS Queue failed", 0, $e);
         }
@@ -50,11 +49,9 @@ class Queues
             ]);
 
             return new Queue($this->client, $result->get(Params::QUEUE_URL));
-            
         } catch (AwsException $e) {
             throw new AwsSqsException("Get SQS Queue failed", 0, $e);
         }
-        
     }
 
     /**

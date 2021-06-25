@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use PHPUnit\Framework\TestCase;
 use Sonergia\Aws\Sqs\Queues;
@@ -37,7 +37,6 @@ class QueueTest extends TestCase
         $sqsClient = new SqsClient($config);
         $this->queues = new Queues($sqsClient); 
         $this->queue = $this->queues->createQueue(self::QUEUE_NAME); 
-
     }
 
     public function tearDown(): void

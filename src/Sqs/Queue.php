@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 namespace Sonergia\Aws\Sqs;
 
-use Aws\Sqs\SqsClient; 
+use Aws\Sqs\SqsClient;
 use Aws\Exception\AwsException;
 use Aws\Result;
 
@@ -29,7 +29,7 @@ class Queue
     }
 
     /**
-     * Send message 
+     * Send message
      *
      * @param Message $message
      * @return Result
@@ -37,7 +37,6 @@ class Queue
     public function sendMessage(Message $message): Result
     {
         try {
-           
             $params = [
                 Params::DELAY_SECONDS => 0,
                 Params::MESSAGE_ATTRIBUTES => $message->attributes(),
@@ -47,11 +46,11 @@ class Queue
             return $this->client->sendMessage($params);
         } catch (AwsException $e) {
             throw new AwsSqsException("Send SQS Message failed", 0, $e);
-        }       
+        }
     }
 
     /**
-     * receive message 
+     * receive message
      *
      * @return Message|null
      */
@@ -74,12 +73,11 @@ class Queue
                     $data[Params::MESSAGE_ID],
                     $data[Params::RECEIPT_HANDLE]
                 );
-            } 
+            }
             return null;
         } catch (AwsException $e) {
             throw new AwsSqsException("Receive SQS Message failed", 0, $e);
-        }    
-        
+        }
     }
 
     /**
@@ -97,10 +95,6 @@ class Queue
             ]);
         } catch (AwsException $e) {
             throw new AwsSqsException("Delete SQS Message failed", 0, $e);
-        }  
-        
+        }
     }
-
-
-
 }

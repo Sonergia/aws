@@ -1,8 +1,6 @@
-<?php 
+<?php
 
 namespace Sonergia\Aws\Sqs;
-
-
 
 class Message
 {
